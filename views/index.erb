@@ -1,5 +1,6 @@
 <h1> All Students </h1>
 
 <% @students.each do |student|  %>
-  <p> Student Details: <%= student.student_details %> </p>
+  <p> Student Details: <%= student.student_name %> </p>
+  <p> Student House: <%= student.house.name %> </p>
   <% end %>

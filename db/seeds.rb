@@ -24,10 +24,12 @@ house4 = House.new( {
   "logo" => "https://vignette4.wikia.nocookie.net/harrypotter/images/e/ef/Slytherin%E2%84%A2_Crest_%28Painting%29.png/revision/latest?cb=20091129190321"
   } )
 
+
 house1.save()
 house2.save()
 house3.save()
 house4.save()
+
 
 student1 = Student.new( { 
 "first_name" => "Harry",
@@ -62,3 +64,4 @@ student2.save()
 student3.save()
 student4.save()
 
+student1.house

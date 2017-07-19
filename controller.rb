@@ -13,6 +13,7 @@ end
 
 # NEW
 get '/student/new' do
+  @houses = House.all
   erb(:new)
 end
 
@@ -22,4 +23,6 @@ post '/student' do
   new_student.save
   redirect '/student'
 end
+
+# UPDATE
 

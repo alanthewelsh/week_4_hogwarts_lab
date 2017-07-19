@@ -1,8 +1,10 @@
+require_relative('./house')
 require_relative('../db/sql_runner')
+require('pry')
 
 class Student
 
-  attr_accessor :first_name, :last_name, :house, :age
+  attr_accessor :first_name, :last_name, :age
 
   def initialize(options)
     @id = options['id'].to_i
@@ -18,8 +20,11 @@ class Student
     @id = student_data.first()['id'].to_i
   end
 
-  def houses
+  def house
+    return House.find(@house_id)
   end
+
+
 
   def self.delete_all
     sql = "DELETE FROM students;"
@@ -40,8 +45,8 @@ class Student
     return result
   end
 
-  def student_details
-    return "#{@first_name}, #{@last_name}, #{@house}, #{@age}"
+  def student_name
+    return "#{@first_name} #{@last_name}"
   end
 
 end
